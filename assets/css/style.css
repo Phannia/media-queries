@@ -1,0 +1,104 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer"
+    ;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(90, 74, 105);
+    color: white;
+}
+
+menu {
+    grid-area: menu;
+    background-color: rgb(90, 74, 105);
+    color: white;
+}
+
+menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(128, 120, 136);
+    color: white;
+}
+.pagination{
+    position: sticky;
+    bottom: 0vh;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(90, 74, 105);
+    color: white;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 2px 2px 3px;
+    text-align: center;
+}
+
+.btn{
+    background-color: rgb(90, 74, 105);
+    color: white;
+}
+
+@media (min-width: 576px) {
+    body {
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas:
+        "nav aside"
+        "menu main"
+        "footer main";
+        height: 100vh;
+        }
+
+    menu {
+        margin: 0;
+        }
+
+    main {
+        height: 50vh;
+    }
+    
+    .escobas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "card card card"
+            "card card card"
+            "card card card";
+            height: 85vh;
+            overflow-y: scroll;
+        }
+
+        .pagination {
+            position: fixed;
+        }
+    }
+
